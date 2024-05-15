@@ -132,12 +132,15 @@ public class WindowView extends javax.swing.JFrame {
         //Debajo generamos un numero random de 1 a 4 digitos de 1 a 3693.
         codigoDesencriptado = (int) (Math.random() * 3693 + 1);
         //Aqui ponemos valores que obtuvimos de la pagina que nos permite usar sus servicios de envio de SMS.
-        String ACCOUNT_SID = System.getenv("AC00b72cd7400c97f435a0d71b04898f84");
-        String AUTH_TOKEN = System.getenv("78cde2a6e87f7f4b7dbda1804563434e");
+        //String ACCOUNT_SID = System.getenv("AC00b72cd7400c97f435a0d71b04898f84");
+        String ACCOUNT_SID = System.getenv("accound_sid from twilio");
+        //String AUTH_TOKEN = System.getenv("78cde2a6e87f7f4b7dbda1804563434e");
+        String AUTH_TOKEN = System.getenv("token from twilio");
 
         //Aca tambien ingresamos solamente los mismos datos que arriba, los puse directamente ya que
         //por alguna razon daba error si no lo hacia.
-        Twilio.init("AC00b72cd7400c97f435a0d71b04898f84", "78cde2a6e87f7f4b7dbda1804563434e");
+        //Twilio.init("AC00b72cd7400c97f435a0d71b04898f84", "78cde2a6e87f7f4b7dbda1804563434e");
+        Twilio.init("account_si", "token");
         //Creamos un objeto de tipo mensaje con los dos numeros, uno que es el nuestro real
         //Y el otro es uno que nos brinda la pagina de twilio.
         //Por ultimo es el mensaje que se enviara, en este caso "la clave es:"+ el numero que debemos de ingresar.
